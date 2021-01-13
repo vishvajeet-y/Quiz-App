@@ -1,9 +1,9 @@
 
 .first{
-    margin-left: 25%;
+    margin-left: 20%;
 }
 .fa{
-   font-size: 35px;
+   font-size: 25px;
    
 }
 .checked{
@@ -15,12 +15,12 @@ h1,h3{
 }
 h1{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 h3{
     font-style:italic;
     color:blue;
-    font-size: 15px;
+    font-size: 13px;
 }
 #lowest-score{
     color:red;
@@ -28,30 +28,91 @@ h3{
 #highest-score{
     color:green;
 }
+.summary-div{
+    font-size: 18px;
+}
 summary{
     background-color: yellow;
-    color:red;width:200px;
+    color:red;
+    width:200px;
+}
+.button-check{
+    font-size:18px;
+}
+@media screen and (min-width:548px)
+{
+    .fa{
+        font-size: 30px;
+        
+     }
+
+    .first{
+        margin-left: 27%;
+    }
+
+    h1,h3{
+        margin-left: 20%;
+       
+    }
+    h1{font-size: 27px;}
+    h3{font-size: 18px;}
+
+    .summary-div{
+        font-size: 22px;
+    }
+    summary{
+        
+        width:250px;
+    }
+    .button-check{
+        font-size:22px;
+    }
 }
 @media screen and (min-width:768px)
 {
+    .fa{
+        font-size: 35px;
+        
+     }
+
     .first{
         margin-left: 30%;
     }
+
     h1,h3{
         margin-left: 25%;
        
     }
+    h1{font-size: 35px;}
     h3{font-size: 23px;}
+    .summary-div{
+        font-size: 25px;
+    }
+    summary{
+        
+        width:300px;
+    }
+    .button-check{
+        font-size:25x;
+    }
 }
 @media screen and (min-width:1200px)
 {
     .first{
         margin-left: 35%;
     }
-
+    .fa{
+        font-size: 35px;
+        
+     }
     h1,h3{
         margin-left: 30%;
         font-family: sans-serif;
     }
+    h1{font-size: 35px;}
     h3{font-size: 25px;}
+    .summary-div{
+        font-size: 28px;
+    }
+    
 }
