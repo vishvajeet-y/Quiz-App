@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <link href="/img/quiz_icon.jpg"  rel="icon">
+     <link  href="../css/style.css" rel="stylesheet">
+     <title>Quiz</title>
+</head>
+<body>
+<div class="container">
+ {{#check_Que question1 undefined}}
+  <h3>Some Error Occurred</h3>
+  {{else}}
+{{>navbar}}
+<div class="container-fluid" style="background-color: lightblue;margin-top:10px;margin-bottom:10px;">
+  <label id="label-heading">Let's Play</label>
+</div>
+<div class="container">
+ 
+
+<form action="result"  class=" form " >
+  
+   <ol  style=" list-style-position: inside;">
+    {{#each question1}}
+        <div class="container-fluid">
+          
+     <li  style=" font-size:20px;font-weight:bold;" ><label  class=" col-.">{{{question}}}</label></li><br>
+       
+    <ol style="list-style-type:lower-alpha;" id="list-second">
+         {{#check_Val incorrect_answers.[0] correct_answer }}
+         <!--Using check_Val helper function we are trying to find correct answer of our quiz
+              and if it is correct then we are giving it value correct and if it is not then we
+              are giving value wrong.-->
+       <li style="margin-right: 3px;"><label class="label"> <input class="answer"  type="radio" name="{{@index}}" value="correct">&nbsp;&nbsp;
+       <i>{{{incorrect_answers.[0]}}}</i></label></li><br>
+        {{else}}
+       <li style="margin-right: 3px;"><label class="label"><input class="answer"  type="radio" name="{{@index}}" value="wrong">&nbsp;&nbsp;
+       <i>{{{incorrect_answers.[0]}}}</i></label></li> <br>
+         {{/check_Val}}
+         {{#check_Val incorrect_answers.[1] correct_answer }}
+        <li style="margin-right: 3px;"> <label class="label"><input class="answer"  type="radio" name="{{@index}}" value="correct">&nbsp;&nbsp;
+       <i>{{{incorrect_answers.[1]}}}</i></label></li><br>
+        {{else}}
+        <li style="margin-right: 3px;"><label class="label"> <input class="answer"  type="radio" name="{{@index}}" value="wrong">&nbsp;&nbsp;
+        <i>{{{incorrect_answers.[1]}}}</i></label></li><br>
+         {{/check_Val}}
+         {{#check_Val incorrect_answers.[2] correct_answer }}
+       <li style="margin-right: 3px;"><label class="label"> <input class="answer"  type="radio" name="{{@index}}" value="correct">&nbsp;&nbsp;
+       <i>{{{incorrect_answers.[2]}}}</i></label></li><br>
+        {{else}}
+        <li style="margin-right: 3px;"><label class="label"> <input class="answer"  type="radio" name="{{@index}}" value="wrong">&nbsp;&nbsp;
+        <i>{{{incorrect_answers.[2]}}}</i></label></li><br>
+         {{/check_Val}}
+         {{#check_Val incorrect_answers.[3] correct_answer }}
+        <li style="margin-right: 3px;"><label class="label"><input class="answer"  type="radio" name="{{@index}}" value="correct">&nbsp;&nbsp;
+        <i>{{{incorrect_answers.[3]}}}</i></label></li><br>
+        {{else}}
+        <li style="margin-right: 3px;"><label class="label"> <input class="answer"  type="radio" name="{{@index}}" value="wrong">&nbsp;&nbsp;
+        <i>{{{incorrect_answers.[3]}}}</i></label></li><br>
+         {{/check_Val}}
+         </ol>
+     </div>
+       
+      
+   {{/each}}
+  <button type="submit" value="submit" class="btn btn-primary"> Submit</button> 
+  </ol>
+   </form>
+  
+   </div>
+ {{/check_Que}} 
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+.first{
+    margin-left: 25%;
+}
+.fa{
+   font-size: 35px;
+   
+}
+.checked{
+    color:orange;
+}
+h1,h3{
+    margin-left: 10%;
+    font-family: sans-serif;
+}
+h1{
+    font-weight: bold;
+    font-size: 22px;
+}
+h3{
+    font-style:italic;
+    color:blue;
+    font-size: 15px;
+}
+#lowest-score{
+    color:red;
+}
+#highest-score{
+    color:green;
+}
+summary{
+    background-color: yellow;
+    color:red;width:200px;
+}
+@media screen and (min-width:768px)
+{
+    .first{
+        margin-left: 30%;
+    }
+    h1,h3{
+        margin-left: 25%;
+       
+    }
+    h3{font-size: 23px;}
+}
+@media screen and (min-width:1200px)
+{
+    .first{
+        margin-left: 35%;
+    }
+
+    h1,h3{
+        margin-left: 30%;
+        font-family: sans-serif;
+    }
+    h3{font-size: 25px;}
+}
